@@ -10,6 +10,8 @@ const Header: React.FC = () => {
 
   const [session, loading] = useSession()
 
+  console.log(`session: ${JSON.stringify(session)}`)
+
   let left = (
     <div className='left'>
       <Link href='/'>
