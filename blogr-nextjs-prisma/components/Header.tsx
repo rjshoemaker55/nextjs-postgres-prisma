@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { signOut, useSession } from 'next-auth/client'
+import { signOut, useSession, getSession } from 'next-auth/client'
 
 const Header: React.FC = () => {
   const router = useRouter()
@@ -9,8 +9,6 @@ const Header: React.FC = () => {
     router.pathname === pathname
 
   const [session, loading] = useSession()
-
-  console.log(`session: ${JSON.stringify(session)}`)
 
   let left = (
     <div className='left'>
